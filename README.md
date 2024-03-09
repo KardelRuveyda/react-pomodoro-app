@@ -18,6 +18,9 @@ Bu basit React uygulaması, Pomodoro tekniğini kullanarak zaman yönetimi yapma
 4. Uygulamayı başlatmak için: `npm start`
 5. Tarayıcınızda [http://localhost:3000](http://localhost:3000) adresine gidin.
 
+<img width="828" alt="image" src="https://github.com/KardelRuveyda/react-pomodoro-app/assets/33912144/51d69c98-aadc-4108-b215-a8db388afa19">
+
+
 ## Kullanım
 
 1. Pomodoro süresini ayarlayın.
