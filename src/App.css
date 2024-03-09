@@ -1,0 +1,80 @@
+.root {
+  position: relative;
+  height: 100vh;
+}
+
+.App {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.timer-button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.timer-button:hover {
+  background-color: #0056b3;
+}
+
+.note-section {
+  margin-top: 30px;
+}
+
+.note-input {
+  width: 300px;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.note-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.note-button:hover {
+  background-color: #218838;
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+}
+
+.note-list li {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #868e96;
+}
+
+.note-toggle,
+.note-delete {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.note-toggle:hover,
+.note-delete:hover {
+  color: #0056b3;
+}
