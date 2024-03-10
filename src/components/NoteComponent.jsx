@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FaCheck, FaTrash } from 'react-icons/fa';
 
-const NoteComponent = () => {
+function NoteComponent (){
   const [note, setNote] = useState('');
   const [notes, setNotes] = useState([]);
 
