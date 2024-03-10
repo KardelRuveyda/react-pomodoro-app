@@ -29,7 +29,7 @@ const TimerComponent = () => {
 
   const resetTimer = () => {
     setIsActive(false);
-    setTime(25 * 60); // Saniye cinsinden 25 dakika
+    setTime(25 * 60); // Saniye cinsinden 25 dakikaa
   };
 
   const formattedTime = moment.utc(time * 1000).format('mm:ss');
