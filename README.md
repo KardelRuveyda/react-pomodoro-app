@@ -1,6 +1,6 @@
 # Pomodoro App
 
-<img width="767" alt="image" src="https://github.com/KardelRuveyda/react-pomodoro-app/assets/33912144/fa6a72af-fc03-432f-9021-b7db7f4d7dcd">
+<img width="869" alt="image" src="https://github.com/KardelRuveyda/react-pomodoro-app/assets/33912144/5fab0049-443f-4723-84fe-aa6cbb7da541">
 
 
 Bu basit React uygulaması, Pomodoro tekniğini kullanarak zaman yönetimi yapmanıza yardımcı olur. Pomodoro tekniği, belirli bir süre (genellikle 25 dakika) boyunca bir göreve odaklanmanızı, ardından kısa bir mola vermenizi önerir.
