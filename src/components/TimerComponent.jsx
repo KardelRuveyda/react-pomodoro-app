@@ -13,7 +13,7 @@ const TimerComponent = () => {
         if (time <= 0) {
           clearInterval(intervalId);
           setIsActive(false);
-          // playDefaultNotificationSound(); // Bu fonksiyonu eklemeyi unutmayın
+          // playDefaultNotificationSound(); 
         } else {
           setTime((prevTime) => prevTime - 1);
         }
