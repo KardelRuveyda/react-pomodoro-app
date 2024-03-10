@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import moment from 'moment';
 
 const TimerComponent = () => {
-  const [minutes, setMinutes] = useState(25);
-  const [seconds, setSeconds] = useState(0);
+  const [time, setTime] = useState(25 * 60); // Saniye cinsinden süre
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
@@ -10,23 +10,18 @@ const TimerComponent = () => {
 
     if (isActive) {
       intervalId = setInterval(() => {
-        if (seconds === 0) {
-          if (minutes === 0) {
-            clearInterval(intervalId);
-            setIsActive(false);
-            // playDefaultNotificationSound(); // Bu fonksiyonu eklemeyi unutmayın
-          } else {
-            setMinutes((prevMinutes) => prevMinutes - 1);
-            setSeconds(59);
-          }
+        if (time <= 0) {
+          clearInterval(intervalId);
+          setIsActive(false);
+          // playDefaultNotificationSound(); // Bu fonksiyonu eklemeyi unutmayın
         } else {
-          setSeconds((prevSeconds) => prevSeconds - 1);
+          setTime((prevTime) => prevTime - 1);
         }
       }, 1000);
     }
 
     return () => clearInterval(intervalId);
-  }, [isActive, minutes, seconds]);
+  }, [isActive, time]);
 
   const startTimer = () => {
     setIsActive(true);
@@ -34,25 +29,14 @@ const TimerComponent = () => {
 
   const resetTimer = () => {
     setIsActive(false);
-    setMinutes(25);
-    setSeconds(0);
+    setTime(25 * 60); // Saniye cinsinden 25 dakika
   };
 
-  const playDefaultNotificationSound = () => {
-    try {
-      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-      const oscillator = audioContext.createOscillator();
-      oscillator.connect(audioContext.destination);
-      oscillator.start();
-      oscillator.stop(audioContext.currentTime + 0.5);
-    } catch (error) {
-      console.error('Varsayılan ses çalınırken bir hata oluştu:', error);
-    }
-  };
+  const formattedTime = moment.utc(time * 1000).format('mm:ss');
 
   return (
     <div>
-      <h2>{`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`}</h2>
+      <h2>{formattedTime}</h2>
       <button className="timer-button" onClick={startTimer}>
         Başlat
       </button>
